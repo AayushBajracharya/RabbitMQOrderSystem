@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>dotnet-RabbitMQOrderSystem.Worker-5fe05279-13f4-4dba-8056-fb8f2cb0da8c</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MassTransit" Version="9.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RabbitMQOrderSystem.Application\RabbitMQOrderSystem.Application.csproj" />
+    <ProjectReference Include="..\RabbitMQOrderSystem.Domain\RabbitMQOrderSystem.Domain.csproj" />
+    <ProjectReference Include="..\RabbitMQOrderSystem.Infrastructure\RabbitMQOrderSystem.Infrastructure.csproj" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "RabbitMQOrderSystem.Api\\RabbitMQOrderSystem.Api.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "RabbitMQOrderSystem.Worker\\RabbitMQOrderSystem.Worker.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

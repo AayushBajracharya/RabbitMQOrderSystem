@@ -1,0 +1,228 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\AayushBajracharya-Co\\Documents\\RabbitMQOrderSystem\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2812145C-541C-44E4-A5B3-23447D3D9D7F}|RabbitMQOrderSystem.Worker\\RabbitMQOrderSystem.Worker.csproj|c:\\users\\aayushbajracharya-co\\documents\\rabbitmqordersystem\\rabbitmqordersystem.worker\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2812145C-541C-44E4-A5B3-23447D3D9D7F}|RabbitMQOrderSystem.Worker\\RabbitMQOrderSystem.Worker.csproj|solutionrelative:rabbitmqordersystem.worker\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{701D3BBE-7E10-4590-85F2-0CFEC3F3E287}|RabbitMQOrderSystem.Domain\\RabbitMQOrderSystem.Domain.csproj|c:\\users\\aayushbajracharya-co\\documents\\rabbitmqordersystem\\rabbitmqordersystem.domain\\events\\ordercreatedevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{701D3BBE-7E10-4590-85F2-0CFEC3F3E287}|RabbitMQOrderSystem.Domain\\RabbitMQOrderSystem.Domain.csproj|solutionrelative:rabbitmqordersystem.domain\\events\\ordercreatedevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BAD8945-EA89-4562-BA65-BAFCDA7C51EC}|RabbitMQOrderSystem.Infrastructure\\RabbitMQOrderSystem.Infrastructure.csproj|c:\\users\\aayushbajracharya-co\\documents\\rabbitmqordersystem\\rabbitmqordersystem.infrastructure\\messaging\\configurations\\rabbitmqsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BAD8945-EA89-4562-BA65-BAFCDA7C51EC}|RabbitMQOrderSystem.Infrastructure\\RabbitMQOrderSystem.Infrastructure.csproj|solutionrelative:rabbitmqordersystem.infrastructure\\messaging\\configurations\\rabbitmqsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BAD8945-EA89-4562-BA65-BAFCDA7C51EC}|RabbitMQOrderSystem.Infrastructure\\RabbitMQOrderSystem.Infrastructure.csproj|c:\\users\\aayushbajracharya-co\\documents\\rabbitmqordersystem\\rabbitmqordersystem.infrastructure\\messaging\\configurations\\rabbitmqconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BAD8945-EA89-4562-BA65-BAFCDA7C51EC}|RabbitMQOrderSystem.Infrastructure\\RabbitMQOrderSystem.Infrastructure.csproj|solutionrelative:rabbitmqordersystem.infrastructure\\messaging\\configurations\\rabbitmqconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{087E90CF-624E-46AC-85FB-B9E2098A9F1F}|RabbitMQOrderSystem.Application\\RabbitMQOrderSystem.Application.csproj|c:\\users\\aayushbajracharya-co\\documents\\rabbitmqordersystem\\rabbitmqordersystem.application\\interfaces\\ieventpublisher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{087E90CF-624E-46AC-85FB-B9E2098A9F1F}|RabbitMQOrderSystem.Application\\RabbitMQOrderSystem.Application.csproj|solutionrelative:rabbitmqordersystem.application\\interfaces\\ieventpublisher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BAD8945-EA89-4562-BA65-BAFCDA7C51EC}|RabbitMQOrderSystem.Infrastructure\\RabbitMQOrderSystem.Infrastructure.csproj|c:\\users\\aayushbajracharya-co\\documents\\rabbitmqordersystem\\rabbitmqordersystem.infrastructure\\publishers\\eventpublisher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BAD8945-EA89-4562-BA65-BAFCDA7C51EC}|RabbitMQOrderSystem.Infrastructure\\RabbitMQOrderSystem.Infrastructure.csproj|solutionrelative:rabbitmqordersystem.infrastructure\\publishers\\eventpublisher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9937B22-559B-44BD-9BB9-38B3BA0EAEF0}|RabbitMQOrderSystem.Api\\RabbitMQOrderSystem.Api.csproj|c:\\users\\aayushbajracharya-co\\documents\\rabbitmqordersystem\\rabbitmqordersystem.api\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9937B22-559B-44BD-9BB9-38B3BA0EAEF0}|RabbitMQOrderSystem.Api\\RabbitMQOrderSystem.Api.csproj|solutionrelative:rabbitmqordersystem.api\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9937B22-559B-44BD-9BB9-38B3BA0EAEF0}|RabbitMQOrderSystem.Api\\RabbitMQOrderSystem.Api.csproj|c:\\users\\aayushbajracharya-co\\documents\\rabbitmqordersystem\\rabbitmqordersystem.api\\dtos\\orderitemrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9937B22-559B-44BD-9BB9-38B3BA0EAEF0}|RabbitMQOrderSystem.Api\\RabbitMQOrderSystem.Api.csproj|solutionrelative:rabbitmqordersystem.api\\dtos\\orderitemrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9937B22-559B-44BD-9BB9-38B3BA0EAEF0}|RabbitMQOrderSystem.Api\\RabbitMQOrderSystem.Api.csproj|c:\\users\\aayushbajracharya-co\\documents\\rabbitmqordersystem\\rabbitmqordersystem.api\\dtos\\createorderrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9937B22-559B-44BD-9BB9-38B3BA0EAEF0}|RabbitMQOrderSystem.Api\\RabbitMQOrderSystem.Api.csproj|solutionrelative:rabbitmqordersystem.api\\dtos\\createorderrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BAD8945-EA89-4562-BA65-BAFCDA7C51EC}|RabbitMQOrderSystem.Infrastructure\\RabbitMQOrderSystem.Infrastructure.csproj|c:\\users\\aayushbajracharya-co\\documents\\rabbitmqordersystem\\rabbitmqordersystem.infrastructure\\messaging\\consumers\\ordercreatedconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BAD8945-EA89-4562-BA65-BAFCDA7C51EC}|RabbitMQOrderSystem.Infrastructure\\RabbitMQOrderSystem.Infrastructure.csproj|solutionrelative:rabbitmqordersystem.infrastructure\\messaging\\consumers\\ordercreatedconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:134:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:133:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\AayushBajracharya-Co\\Documents\\RabbitMQOrderSystem\\RabbitMQOrderSystem.Worker\\Program.cs",
+              "RelativeDocumentMoniker": "RabbitMQOrderSystem.Worker\\Program.cs",
+              "ToolTip": "C:\\Users\\AayushBajracharya-Co\\Documents\\RabbitMQOrderSystem\\RabbitMQOrderSystem.Worker\\Program.cs",
+              "RelativeToolTip": "RabbitMQOrderSystem.Worker\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-30T10:17:36.069Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "OrderCreatedConsumer.cs",
+              "DocumentMoniker": "C:\\Users\\AayushBajracharya-Co\\Documents\\RabbitMQOrderSystem\\RabbitMQOrderSystem.Infrastructure\\Messaging\\Consumers\\OrderCreatedConsumer.cs",
+              "RelativeDocumentMoniker": "RabbitMQOrderSystem.Infrastructure\\Messaging\\Consumers\\OrderCreatedConsumer.cs",
+              "ToolTip": "C:\\Users\\AayushBajracharya-Co\\Documents\\RabbitMQOrderSystem\\RabbitMQOrderSystem.Infrastructure\\Messaging\\Consumers\\OrderCreatedConsumer.cs",
+              "RelativeToolTip": "RabbitMQOrderSystem.Infrastructure\\Messaging\\Consumers\\OrderCreatedConsumer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-30T10:09:23.889Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CreateOrderRequest.cs",
+              "DocumentMoniker": "C:\\Users\\AayushBajracharya-Co\\Documents\\RabbitMQOrderSystem\\RabbitMQOrderSystem.Api\\DTOs\\CreateOrderRequest.cs",
+              "RelativeDocumentMoniker": "RabbitMQOrderSystem.Api\\DTOs\\CreateOrderRequest.cs",
+              "ToolTip": "C:\\Users\\AayushBajracharya-Co\\Documents\\RabbitMQOrderSystem\\RabbitMQOrderSystem.Api\\DTOs\\CreateOrderRequest.cs",
+              "RelativeToolTip": "RabbitMQOrderSystem.Api\\DTOs\\CreateOrderRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-30T10:00:31.228Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "OrderItemRequest.cs",
+              "DocumentMoniker": "C:\\Users\\AayushBajracharya-Co\\Documents\\RabbitMQOrderSystem\\RabbitMQOrderSystem.Api\\DTOs\\OrderItemRequest.cs",
+              "RelativeDocumentMoniker": "RabbitMQOrderSystem.Api\\DTOs\\OrderItemRequest.cs",
+              "ToolTip": "C:\\Users\\AayushBajracharya-Co\\Documents\\RabbitMQOrderSystem\\RabbitMQOrderSystem.Api\\DTOs\\OrderItemRequest.cs",
+              "RelativeToolTip": "RabbitMQOrderSystem.Api\\DTOs\\OrderItemRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-30T10:00:22.177Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "OrderController.cs",
+              "DocumentMoniker": "C:\\Users\\AayushBajracharya-Co\\Documents\\RabbitMQOrderSystem\\RabbitMQOrderSystem.Api\\Controllers\\OrderController.cs",
+              "RelativeDocumentMoniker": "RabbitMQOrderSystem.Api\\Controllers\\OrderController.cs",
+              "ToolTip": "C:\\Users\\AayushBajracharya-Co\\Documents\\RabbitMQOrderSystem\\RabbitMQOrderSystem.Api\\Controllers\\OrderController.cs",
+              "RelativeToolTip": "RabbitMQOrderSystem.Api\\Controllers\\OrderController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-30T09:59:53.879Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "EventPublisher.cs",
+              "DocumentMoniker": "C:\\Users\\AayushBajracharya-Co\\Documents\\RabbitMQOrderSystem\\RabbitMQOrderSystem.Infrastructure\\Publishers\\EventPublisher.cs",
+              "RelativeDocumentMoniker": "RabbitMQOrderSystem.Infrastructure\\Publishers\\EventPublisher.cs",
+              "ToolTip": "C:\\Users\\AayushBajracharya-Co\\Documents\\RabbitMQOrderSystem\\RabbitMQOrderSystem.Infrastructure\\Publishers\\EventPublisher.cs",
+              "RelativeToolTip": "RabbitMQOrderSystem.Infrastructure\\Publishers\\EventPublisher.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-30T09:51:44.321Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IEventPublisher.cs",
+              "DocumentMoniker": "C:\\Users\\AayushBajracharya-Co\\Documents\\RabbitMQOrderSystem\\RabbitMQOrderSystem.Application\\Interfaces\\IEventPublisher.cs",
+              "RelativeDocumentMoniker": "RabbitMQOrderSystem.Application\\Interfaces\\IEventPublisher.cs",
+              "ToolTip": "C:\\Users\\AayushBajracharya-Co\\Documents\\RabbitMQOrderSystem\\RabbitMQOrderSystem.Application\\Interfaces\\IEventPublisher.cs",
+              "RelativeToolTip": "RabbitMQOrderSystem.Application\\Interfaces\\IEventPublisher.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-30T09:50:34.796Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RabbitMqConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\AayushBajracharya-Co\\Documents\\RabbitMQOrderSystem\\RabbitMQOrderSystem.Infrastructure\\Messaging\\Configurations\\RabbitMqConfiguration.cs",
+              "RelativeDocumentMoniker": "RabbitMQOrderSystem.Infrastructure\\Messaging\\Configurations\\RabbitMqConfiguration.cs",
+              "ToolTip": "C:\\Users\\AayushBajracharya-Co\\Documents\\RabbitMQOrderSystem\\RabbitMQOrderSystem.Infrastructure\\Messaging\\Configurations\\RabbitMqConfiguration.cs",
+              "RelativeToolTip": "RabbitMQOrderSystem.Infrastructure\\Messaging\\Configurations\\RabbitMqConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-30T07:54:18.581Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RabbitMqSettings.cs",
+              "DocumentMoniker": "C:\\Users\\AayushBajracharya-Co\\Documents\\RabbitMQOrderSystem\\RabbitMQOrderSystem.Infrastructure\\Messaging\\Configurations\\RabbitMqSettings.cs",
+              "RelativeDocumentMoniker": "RabbitMQOrderSystem.Infrastructure\\Messaging\\Configurations\\RabbitMqSettings.cs",
+              "ToolTip": "C:\\Users\\AayushBajracharya-Co\\Documents\\RabbitMQOrderSystem\\RabbitMQOrderSystem.Infrastructure\\Messaging\\Configurations\\RabbitMqSettings.cs",
+              "RelativeToolTip": "RabbitMQOrderSystem.Infrastructure\\Messaging\\Configurations\\RabbitMqSettings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-30T07:47:59.206Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "OrderCreatedEvent.cs",
+              "DocumentMoniker": "C:\\Users\\AayushBajracharya-Co\\Documents\\RabbitMQOrderSystem\\RabbitMQOrderSystem.Domain\\Events\\OrderCreatedEvent.cs",
+              "RelativeDocumentMoniker": "RabbitMQOrderSystem.Domain\\Events\\OrderCreatedEvent.cs",
+              "ToolTip": "C:\\Users\\AayushBajracharya-Co\\Documents\\RabbitMQOrderSystem\\RabbitMQOrderSystem.Domain\\Events\\OrderCreatedEvent.cs",
+              "RelativeToolTip": "RabbitMQOrderSystem.Domain\\Events\\OrderCreatedEvent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-30T07:46:42.607Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 1883,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{004be353-6879-467c-9d1e-9ac23cdf6d49}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
