@@ -1,5 +1,6 @@
 ﻿using MassTransit;
 using Microsoft.Extensions.Logging;
+using RabbitMQOrderSystem.Application.Interfaces;
 using RabbitMQOrderSystem.Domain.Events;
 
 namespace RabbitMQOrderSystem.Infrastructure.Messaging.Consumers
@@ -7,30 +8,28 @@ namespace RabbitMQOrderSystem.Infrastructure.Messaging.Consumers
     public class OrderCreatedConsumer : IConsumer<OrderCreatedEvent>
     {
         private readonly ILogger<OrderCreatedConsumer> _logger;
+        private readonly ICacheService _cacheService;
 
-        public OrderCreatedConsumer(ILogger<OrderCreatedConsumer> logger)
+        public OrderCreatedConsumer(ILogger<OrderCreatedConsumer> logger, ICacheService cacheService)
         {
             _logger = logger;
+            _cacheService = cacheService;
         }
 
         public async Task Consume(ConsumeContext<OrderCreatedEvent> context)
         {
             var order = context.Message;
 
-            _logger.LogInformation("=== Order Received from RabbitMQ ===");
-            _logger.LogInformation("Order ID     : {OrderId}", order.OrderId);
-            _logger.LogInformation("Order Number : {OrderNumber}", order.OrderNumber);
-            _logger.LogInformation("Amount       : ${Amount}", order.Amount);
-            _logger.LogInformation("Customer     : {CustomerEmail}", order.CustomerEmail);
-            _logger.LogInformation("Items Count  : {ItemCount}", order.Items.Count);
-            _logger.LogInformation("Received At  : {ReceivedAt}", DateTime.UtcNow);
+            _logger.LogInformation("=== Processing Order from RabbitMQ ===");
+            _logger.LogInformation("Order ID: {OrderId}", order.OrderId);
 
-            // Simulate processing time (e.g., send email, update inventory, etc.)
-            await Task.Delay(2000);
+            await Task.Delay(1500); 
 
-            _logger.LogInformation("Order {OrderId} processed successfully!", order.OrderId);
+            // Cache the processed order
+            var cacheKey = $"order:{order.OrderId}";
+            await _cacheService.SetAsync(cacheKey, order, TimeSpan.FromMinutes(60));
 
-            // You can throw exception here to test retry / DLQ later
+            _logger.LogInformation("Order {OrderId} processed and cached successfully!", order.OrderId);
         }
     }
 }

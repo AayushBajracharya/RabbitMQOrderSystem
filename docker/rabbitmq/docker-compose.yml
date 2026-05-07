@@ -6,18 +6,24 @@ services:
     container_name: rabbitmq-dev
     restart: unless-stopped
     ports:
-      - "5672:5672" # AMQP port - .NET app will connect here
-      - "15672:15672" # Management UI
+      - "5672:5672"
+      - "15672:15672"
     environment:
       RABBITMQ_DEFAULT_USER: admin
       RABBITMQ_DEFAULT_PASS: Admin@123
     volumes:
       - rabbitmq_data:/var/lib/rabbitmq
-    healthcheck:
-      test: ["CMD", "rabbitmq-diagnostics", "check_port_connectivity"]
-      interval: 10s
-      timeout: 5s
-      retries: 5
+
+  redis:
+    image: redis:7-alpine
+    container_name: redis-dev
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    command: redis-server --appendonly yes --requirepass Redis@123
+    volumes:
+      - redis_data:/data
 
 volumes:
   rabbitmq_data:
+  redis_data:

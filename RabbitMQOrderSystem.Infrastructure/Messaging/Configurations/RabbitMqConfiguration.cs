@@ -2,6 +2,7 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using RabbitMQOrderSystem.Application.Interfaces;
+using RabbitMQOrderSystem.Infrastructure.Messaging.Cache;
 using RabbitMQOrderSystem.Infrastructure.Messaging.Configurations;
 using RabbitMQOrderSystem.Infrastructure.Messaging.Consumers;
 using RabbitMQOrderSystem.Infrastructure.Publishers;
@@ -41,6 +42,9 @@ public static class RabbitMqConfiguration
 
         services.AddMassTransitHostedService();
         services.AddScoped<IEventPublisher, EventPublisher>();
+        services.AddRedisCache(configuration);
+        services.AddScoped<ICacheService, RedisCacheService>();
+
         return services;
     }
 }
