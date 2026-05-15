@@ -13,6 +13,12 @@ services:
       RABBITMQ_DEFAULT_PASS: Admin@123
     volumes:
       - rabbitmq_data:/var/lib/rabbitmq
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
 
   redis:
     image: redis:7-alpine
@@ -24,6 +30,74 @@ services:
     volumes:
       - redis_data:/data
 
+  db:
+    image: postgres:18
+    container_name: postgres-dev
+    restart: unless-stopped
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: orderdb
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      PGDATA: /var/lib/postgresql/data/pgdata
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: laundrysaas-pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@dev.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+      PGADMIN_CONFIG_SERVER_MODE: "False"
+      PGADMIN_CONFIG_MASTER_PASSWORD_REQUIRED: "False"
+    ports:
+      - "8082:80"
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+    depends_on:
+      - db
+    restart: unless-stopped
+
+  # ====================== APPLICATIONS ======================
+
+  api:
+    build:
+      context: ../..
+      dockerfile: RabbitMQOrderSystem.Api/Dockerfile
+    container_name: api-dev
+    restart: unless-stopped
+    ports:
+      - "5000:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+      redis:
+        condition: service_started
+      db:
+        condition: service_started
+
+  worker:
+    build:
+      context: ../..
+      dockerfile: RabbitMQOrderSystem.Worker/Dockerfile
+    container_name: worker-dev
+    restart: unless-stopped
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+      redis:
+        condition: service_started
+      db:
+        condition: service_started
+
 volumes:
   rabbitmq_data:
   redis_data:
+  postgres_data:
+  pgadmin_data:

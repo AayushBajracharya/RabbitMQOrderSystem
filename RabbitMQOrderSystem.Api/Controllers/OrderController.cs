@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using RabbitMQOrderSystem.Api.DTOs;
 using RabbitMQOrderSystem.Application.Interfaces;
+using RabbitMQOrderSystem.Domain.Entities;
 using RabbitMQOrderSystem.Domain.Events;
 
 namespace RabbitMQOrderSystem.Api.Controllers
@@ -11,11 +12,13 @@ namespace RabbitMQOrderSystem.Api.Controllers
     {
         private readonly IEventPublisher _eventPublisher;
         private readonly ICacheService _cacheService;
+        private readonly IOrderRepository _orderRepository;
 
-        public OrderController(IEventPublisher eventPublisher, ICacheService cacheService)
+        public OrderController(IEventPublisher eventPublisher, ICacheService cacheService, IOrderRepository orderRepository )
         {
             _eventPublisher = eventPublisher;
             _cacheService = cacheService;
+            _orderRepository = orderRepository;
         }
 
         [HttpPost("create")]
@@ -28,7 +31,8 @@ namespace RabbitMQOrderSystem.Api.Controllers
                 Amount = request.Amount,
                 CustomerEmail = request.CustomerEmail,
                 CreatedAt = DateTime.UtcNow,
-                Items = request.Items.Select(i => new OrderItem
+                Status = request.Status,
+                Items = request.Items.Select(i => new OrderItemDto
                 {
                     ProductName = i.ProductName,
                     Quantity = i.Quantity,
@@ -51,29 +55,33 @@ namespace RabbitMQOrderSystem.Api.Controllers
         {
             var cacheKey = $"order:{orderId}";
 
-            // Try from Cache first (Cache-Aside)
-            var cachedOrder = await _cacheService.GetAsync<OrderCreatedEvent>(cacheKey);
+            // 1. Try Cache First (Cache-Aside Pattern)
+            var cachedOrder = await _cacheService.GetAsync<Order>(cacheKey);
             if (cachedOrder != null)
             {
-                return Ok(new { Source = "Cache", Order = cachedOrder });
+                return Ok(new
+                {
+                    Source = "Redis Cache",
+                    Order = cachedOrder
+                });
             }
 
-            // Cache Miss → In real project you would get from Database
-            // For now, we'll return a simulated response
-            var order = new OrderCreatedEvent
+            // 2. Cache Miss → Fetch from Database
+            var order = await _orderRepository.GetByIdAsync(orderId);
+
+            if (order == null)
             {
-                OrderId = orderId,
-                OrderNumber = $"ORD-SIM-{DateTime.UtcNow:yyyyMMdd}",
-                Amount = 1299.99m,
-                CustomerEmail = "customer@example.com",
-                CreatedAt = DateTime.UtcNow,
-                Items = new List<OrderItem> { new OrderItem { ProductName = "Laptop", Quantity = 1, UnitPrice = 1299.99m } }
-            };
+                return NotFound(new { Message = $"Order with ID {orderId} not found." });
+            }
 
-            // Store in Cache
-            await _cacheService.SetAsync(cacheKey, order);
+            // 3. Store in Cache for next time
+            await _cacheService.SetAsync(cacheKey, order, TimeSpan.FromMinutes(30));
 
-            return Ok(new { Source = "Database (simulated)", Order = order });
+            return Ok(new
+            {
+                Source = "Database",
+                Order = order
+            });
         }
     }
 }

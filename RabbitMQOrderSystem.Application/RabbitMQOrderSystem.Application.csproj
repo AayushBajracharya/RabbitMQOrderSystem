@@ -7,13 +7,19 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\RabbitMQOrderSystem.Domain\RabbitMQOrderSystem.Domain.csproj" />
+    <Compile Remove="DTOs\**" />
+    <Compile Remove="Events\**" />
+    <Compile Remove="Services\**" />
+    <EmbeddedResource Remove="DTOs\**" />
+    <EmbeddedResource Remove="Events\**" />
+    <EmbeddedResource Remove="Services\**" />
+    <None Remove="DTOs\**" />
+    <None Remove="Events\**" />
+    <None Remove="Services\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Events\" />
-    <Folder Include="DTOs\" />
-    <Folder Include="Services\" />
+    <ProjectReference Include="..\RabbitMQOrderSystem.Domain\RabbitMQOrderSystem.Domain.csproj" />
   </ItemGroup>
 
 </Project>

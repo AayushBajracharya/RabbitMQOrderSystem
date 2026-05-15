@@ -2,6 +2,7 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using RabbitMQOrderSystem.Application.Interfaces;
+using RabbitMQOrderSystem.Infrastructure.Data.Repositories;
 using RabbitMQOrderSystem.Infrastructure.Messaging.Cache;
 using RabbitMQOrderSystem.Infrastructure.Messaging.Configurations;
 using RabbitMQOrderSystem.Infrastructure.Messaging.Consumers;
@@ -19,6 +20,7 @@ public static class RabbitMqConfiguration
         {
             // Register Consumer
             x.AddConsumer<OrderCreatedConsumer>();
+            x.AddConsumer<OrderUpdatedConsumer>();
             x.UsingRabbitMq((context, cfg) =>
             {
                 // Correct Host configuration for MassTransit + RabbitMQ
@@ -44,6 +46,9 @@ public static class RabbitMqConfiguration
         services.AddScoped<IEventPublisher, EventPublisher>();
         services.AddRedisCache(configuration);
         services.AddScoped<ICacheService, RedisCacheService>();
+        services.AddScoped<IOrderRepository, OrderRepository>();
+
+
 
         return services;
     }

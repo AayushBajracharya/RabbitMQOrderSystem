@@ -1,4 +1,6 @@
-﻿namespace RabbitMQOrderSystem.Domain.Events;
+﻿using RabbitMQOrderSystem.Domain.Entities;
+
+namespace RabbitMQOrderSystem.Domain.Events;
 
 public record OrderCreatedEvent
 {
@@ -7,10 +9,11 @@ public record OrderCreatedEvent
     public decimal Amount { get; init; }
     public string CustomerEmail { get; init; } = string.Empty;
     public DateTime CreatedAt { get; init; } = DateTime.UtcNow;
-    public List<OrderItem> Items { get; init; } = new();
+    public OrderStatus Status { get; set; } = OrderStatus.Pending;
+    public List<OrderItemDto> Items { get; init; } = new();
 }
 
-public record OrderItem
+public record OrderItemDto
 {
     public string ProductName { get; init; } = string.Empty;
     public int Quantity { get; init; }

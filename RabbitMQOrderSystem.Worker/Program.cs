@@ -1,9 +1,11 @@
-using RabbitMQOrderSystem.Infrastructure.Messaging;
+using Microsoft.EntityFrameworkCore;
+using RabbitMQOrderSystem.Infrastructure.Data;
 
 IHost host = Host.CreateDefaultBuilder(args)
     .ConfigureServices((hostContext, services) =>
     {
-        services.AddRabbitMq(hostContext.Configuration);
+        services.AddDbContext<ApplicationDbContext>(options =>
+            options.UseNpgsql(hostContext.Configuration.GetConnectionString("DefaultConnection")));
     })
     .Build();
 

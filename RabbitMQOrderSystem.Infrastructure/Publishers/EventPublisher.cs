@@ -18,5 +18,11 @@ namespace RabbitMQOrderSystem.Infrastructure.Publishers
             await _publishEndpoint.Publish(orderEvent);
             Console.WriteLine($"[Publisher] OrderCreatedEvent published: {orderEvent.OrderId}");
         }
+
+        public async Task PublishOrderUpdatedAsync(OrderUpdatedEvent orderEvent)
+        {
+            await _publishEndpoint.Publish(orderEvent);
+            Console.WriteLine($"[Publisher] OrderUpdatedEvent published: {orderEvent.OrderId}");
+        }
     }
 }
