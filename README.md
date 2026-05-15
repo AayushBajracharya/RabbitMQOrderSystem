@@ -1,6 +1,6 @@
 # RabbitMQ + Redis + EF Core Order System
 
-A mid-level .NET example demonstrating Clean Architecture with modern backend tools.
+A .NET example demonstrating Clean Architecture with modern backend tools.
 
 ## Tech Stack
 - **.NET 8** + Clean Architecture
